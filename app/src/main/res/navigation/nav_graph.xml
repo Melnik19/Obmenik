@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dollarsFragment">
+
+    <fragment
+        android:id="@+id/dollarsFragment"
+        android:name="com.example.laba32.presentation.fragments.dollars.DollarsFragment"
+        android:label="fragment_dollars"
+        tools:layout="@layout/fragment_dollars" >
+        <action
+            android:id="@+id/action_dollarsFragment_to_euroFragment"
+            app:destination="@id/euroFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/euroFragment"
+        android:name="com.example.laba32.presentation.fragments.euro.EuroFragment"
+        android:label="fragment_euro"
+        tools:layout="@layout/fragment_euro" >
+        <action
+            android:id="@+id/action_euroFragment_to_dollarsFragment"
+            app:destination="@id/dollarsFragment" />
+    </fragment>
+</navigation>
